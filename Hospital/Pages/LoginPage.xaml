@@ -20,7 +20,7 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            
+
             <Border
                 Grid.ColumnSpan="3"
                 Name="HeaderBackground"
@@ -28,12 +28,6 @@
                 BorderBrush="Black"
                 BorderThickness="2"
                 Margin="-2,-2,-2,0"/>
-
-            <Image
-                Name="HeaderLogo"
-                Source="/Resources/drawable/logo.png"
-                HorizontalAlignment="Left"
-                Margin="25 5 5 5" />
 
             <TextBlock
                 Name="HeaderText"

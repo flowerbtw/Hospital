@@ -1,4 +1,5 @@
 ﻿using Hospital.Pages.ContentPages;
+using Hospital.Pages.ContentPages.MedicalCardsPages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,10 +33,10 @@ namespace Hospital.Pages
             NavigationService?.Navigate(new PatientRegistrationPage());
         }
 
-        private void ViewMedicalCardButton_Click(object sender, RoutedEventArgs e)
+        private void ViewMedicalCardsButton_Click(object sender, RoutedEventArgs e)
         {
 
-            NavigationService?.Navigate(new ViewMedicalCardPage());
+            NavigationService?.Navigate(new ViewMedicalCardsPage());
         }
 
         private void SendToHospitalizationButton_Click(object sender, RoutedEventArgs e)

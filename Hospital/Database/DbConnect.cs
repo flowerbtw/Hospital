@@ -8,6 +8,6 @@ namespace Hospital.Database
 {
     static public class DbConnect
     {
-        public static HospitalContext dB = new HospitalContext();
+        public static HospitalContext dB = new();
     }
 }

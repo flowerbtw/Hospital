@@ -21,9 +21,7 @@
             </Style.Triggers>
         </Style>
 
-        <Style 
-            TargetType="TextBox"
-            x:Key="RoundedTextBoxStyle">
+        <Style TargetType="TextBox" x:Key="RoundedTextBoxStyle">
             <Setter Property="Foreground" Value="Black" />
             <Setter Property="Background" Value="White" />
             <Setter Property="BorderBrush" Value="Black" />
@@ -49,9 +47,7 @@
             </Setter>
         </Style>
 
-        <Style 
-            TargetType="Button"
-            x:Key="RoundedButtonStyle">
+        <Style TargetType="Button" x:Key="RoundedButtonStyle">
             <Setter Property="Foreground" Value="White" />
             <Setter Property="BorderBrush" Value="Black" />
             <Setter Property="BorderThickness" Value="2" />

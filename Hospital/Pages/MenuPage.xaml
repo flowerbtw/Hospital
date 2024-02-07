@@ -79,15 +79,15 @@
                     Click="PatientRegistrationButton_Click"/>
 
                 <Button
-                    Name="ViewMedicalCardButton"
+                    Name="ViewMedicalCardsButton"
                     Grid.Row="1"
                     Grid.Column="2"
                     Background="Black"
-                    Content="View Medical Card"
+                    Content="View Medical Cards"
                     FontSize="24px"
                     Style="{StaticResource RoundedButtonStyle}"
                     Margin="15 15"
-                    Click="ViewMedicalCardButton_Click"/>
+                    Click="ViewMedicalCardsButton_Click"/>
             </Grid>
 
             <Grid Name="SecondButtonsRowGrid" Grid.Row="2">
@@ -157,20 +157,28 @@
                     Style="{StaticResource RoundedButtonStyle}"
                     Margin="15 15"
                     Click="BedOccupancyButton_Click"/>
-            </Grid>
 
-            <Button
-                Name="AppointmentSummarySheetsButton"
-                Grid.Row="3"
-                Grid.Column="1"   
-                Background="Black"   
-                Content="Patient Registration"   
-                VerticalAlignment="Bottom"
-                HorizontalAlignment="Right"
-                FontSize="24px"
-                Style="{StaticResource RoundedButtonStyle}"
-                Margin="15 15"
-                Click="AppointmentSummarySheetsButton_Click"/>      
+                <Grid Name="ApointmentSummarySheetsButtonGrid" Grid.Row="1" Grid.Column="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    
+                    <Button
+                        Name="AppointmentSummarySheetsButton"
+                        Grid.Row="1"
+                        Grid.Column="3"   
+                        Background="Black"   
+                        Content="Patient Registration"   
+                        FontSize="22px"
+                        Style="{StaticResource RoundedButtonStyle}"
+                        Click="AppointmentSummarySheetsButton_Click"/>
+                </Grid>
+            </Grid>
         </Grid>
     </Grid>
 </Page>

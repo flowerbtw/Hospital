@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Hospital.Pages.ContentPages
+namespace Hospital.Pages.ContentPages.MedicalCardsPages
 {
     /// <summary>
-    /// Логика взаимодействия для ViewMedicalCardPage.xaml
+    /// Логика взаимодействия для MedicalCardPage.xaml
     /// </summary>
-    public partial class ViewMedicalCardPage : Page
+    public partial class MedicalCardPage : Page
     {
-        public ViewMedicalCardPage()
+        public MedicalCardPage()
         {
             InitializeComponent();
         }

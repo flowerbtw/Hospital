@@ -5,10 +5,297 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Hospital.Pages.ContentPages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="1080" d:DesignWidth="1920"
       Title="PatientRegistrationPage">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid Name="HeaderGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Border
+                Grid.ColumnSpan="3"
+                Name="HeaderBackground"
+                Background="Black"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Margin="-2,-2,-2,0"/>
+
+            <TextBlock
+                Name="HeaderText"
+                Grid.Column="1"
+                Text="App"
+                Style="{StaticResource TextBlockFontStyle}"
+                Foreground="White"
+                FontSize="48px"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"/>
+        </Grid>
+
+        <Grid Name="ContentGrid" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Name="TopContentGrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.6*"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="0.2*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Name="ImageGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    
+                    
+                </Grid>
+
+                <Grid Name="MainInformationGrid" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Name="NameGrid" Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBox
+                            Name="FirstNameTextBox"
+                            Text="First Name"
+                            Style="{StaticResource RoundedTextBoxStyle}"
+                            VerticalAlignment="Center"
+                            GotFocus="FirstNameTextBox_GotFocus"/>
+
+                        <TextBox
+                            Name="LastNameTextBox"
+                            Grid.Column="1"
+                            Text="Last Name"
+                            Style="{StaticResource RoundedTextBoxStyle}"
+                            VerticalAlignment="Center"
+                            GotFocus="LastNameTextBox_GotFocus"/>
+
+                        <TextBox
+                            Name="PatronymicTextBox"
+                            Grid.Column="2"
+                            Text="Patronymic"
+                            Style="{StaticResource RoundedTextBoxStyle}"
+                            VerticalAlignment="Center"
+                            GotFocus="PatronymicTextBox_GotFocus"/>
+                    </Grid>
+
+                    <TextBox
+                            Name="PassportTextBox"
+                            Grid.Row="2"
+                            Text="Passport"
+                            Style="{StaticResource RoundedTextBoxStyle}"
+                            VerticalAlignment="Center"
+                            Margin="0 0 735 0"
+                            GotFocus="PassportTextBox_GotFocus"/>
+
+                    <Grid Name="BithdateAndGenderGrid" Grid.Row="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.3*"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBox
+                            Name="BirthdateTextBox"
+                            Text="Birthdate"
+                            Style="{StaticResource RoundedTextBoxStyle}"
+                            VerticalAlignment="Center"
+                            GotFocus="BirthdateTextBox_GotFocus"/>
+
+                        <TextBox
+                            Name="GenderTextBox"
+                            Grid.Column="1"
+                            Text="Gender"
+                            Style="{StaticResource RoundedTextBoxStyle}"
+                            VerticalAlignment="Center"
+                            Margin="0 0 700 0"
+                            GotFocus="GenderTextBox_GotFocus"/>
+                    </Grid>
+
+                    <Grid Name="LivingPlaceGrid" Grid.Row="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBox
+                            Name="CountryTextBox"
+                            Text="Country"
+                            Style="{StaticResource RoundedTextBoxStyle}"
+                            VerticalAlignment="Center"
+                            GotFocus="CountryTextBox_GotFocus"/>
+
+                        <TextBox
+                            Name="CityTextBox"
+                            Grid.Column="1"
+                            Text="City"
+                            Style="{StaticResource RoundedTextBoxStyle}"
+                            VerticalAlignment="Center"
+                            GotFocus="CityTextBox_GotFocus"/>
+
+                        <TextBox
+                            Name="StreetTextBox"
+                            Grid.Column="2"
+                            Text="Street"
+                            Style="{StaticResource RoundedTextBoxStyle}"
+                            VerticalAlignment="Center"
+                            GotFocus="StreetTextBox_GotFocus"/>
+
+                        <TextBox
+                            Name="HouseTextBox"
+                            Grid.Column="3"
+                            Text="House"
+                            Style="{StaticResource RoundedTextBoxStyle}"
+                            VerticalAlignment="Center"
+                            GotFocus="HouseTextBox_GotFocus"/>
+
+                        <TextBox
+                            Name="ApartmentTextBox"
+                            Grid.Column="4"
+                            Text="Apartment"
+                            Style="{StaticResource RoundedTextBoxStyle}"
+                            VerticalAlignment="Center"
+                            GotFocus="ApartmentTextBox_GotFocus"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+
+            <Grid Name="BottomContentGrid" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.14*"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="0.14*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <TextBox
+                    Name="PhoneNumberTextBox"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Text="Phone Number"
+                    Style="{StaticResource RoundedTextBoxStyle}"
+                    VerticalAlignment="Center"
+                    Margin="0 0 1111 0"
+                    GotFocus="PhoneNumberTextBox_GotFocus"/>
+
+                <TextBox
+                    Name="EmailTextBox"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Text="Email"
+                    Style="{StaticResource RoundedTextBoxStyle}"
+                    VerticalAlignment="Center"
+                    Margin="0 0 1000 0"
+                    GotFocus="EmailTextBox_GotFocus"/>
+
+                <Grid Name="MedicalCardAndInsuranceNumbersGrid" Grid.Row="3" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox
+                        Name="MedicalCardNumberTextBox"
+                        Text="Medical Card Number"
+                        Style="{StaticResource RoundedTextBoxStyle}"
+                        VerticalAlignment="Center"
+                        GotFocus="MedicalCardNumberTextBox_GotFocus"/>
+
+                    <TextBox
+                        Name="InsuranceNumberTextBox"
+                        Grid.Column="1"
+                        Text="Insurance Number"
+                        Style="{StaticResource RoundedTextBoxStyle}"
+                        VerticalAlignment="Center"
+                        GotFocus="InsuranceNumberTextBox_GotFocus"/>
+                </Grid>
+
+                <Grid Name="AppointmentsGrid" Grid.Row="4" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.3*"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <TextBox
+                        Name="LastAppointmentTextBox"
+                        Text="Last Appointment Date"
+                        Style="{StaticResource RoundedTextBoxStyle}"
+                        VerticalAlignment="Center"
+                        GotFocus="LastAppointmentTextBox_GotFocus"/>
+
+                    <TextBox
+                        Name="NextAppointmentTextBox"
+                        Grid.Column="1"
+                        Text="Next Appointment Date"
+                        Style="{StaticResource RoundedTextBoxStyle}"
+                        VerticalAlignment="Center"
+                        Margin="0 0 800 0"
+                        GotFocus="NextAppointmentTextBox_GotFocus"/>
+                </Grid>
+
+                <TextBox
+                    Name="DiagnosisTextBox"
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Text="Diagnosis"
+                    Style="{StaticResource RoundedTextBoxStyle}"
+                    Margin="0 10"
+                    GotFocus="DiagnosisTextBox_GotFocus"/>
+
+                <TextBox
+                    Name="MedicalHistoryTextBox"
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    Text="Medical History"
+                    Style="{StaticResource RoundedTextBoxStyle}"
+                    Margin="0 10"
+                    GotFocus="MedicalHistoryTextBox_GotFocus"/>
+
+                <Button
+                    Name="RegisterButton"
+                    Grid.Row="6"
+                    Grid.Column="2"
+                    Background="Black"
+                    Content="Register"
+                    FontSize="22px"
+                    Style="{StaticResource RoundedButtonStyle}"
+                    Margin="15 15"
+                    Click="RegisterButton_Click"/>
+            </Grid>
+        </Grid>
     </Grid>
 </Page>
