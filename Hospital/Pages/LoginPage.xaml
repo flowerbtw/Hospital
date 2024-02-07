@@ -1,0 +1,116 @@
+﻿<Page x:Class="Hospital.Pages.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Hospital.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="LoginPage">
+
+    <Grid Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid Name="HeaderGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            
+            <Border
+                Grid.ColumnSpan="3"
+                Name="HeaderBackground"
+                Background="Black"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Margin="-2,-2,-2,0"/>
+
+            <Image
+                Name="HeaderLogo"
+                Source="/Resources/drawable/logo.png"
+                HorizontalAlignment="Left"
+                Margin="25 5 5 5" />
+
+            <TextBlock
+                Name="HeaderText"
+                Grid.Column="1"
+                Text="App"
+                Style="{StaticResource TextBlockFontStyle}"
+                Foreground="White"
+                FontSize="48px"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"/>
+        </Grid>
+
+        <Grid Name="ContentGrid" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.8*" />
+                <RowDefinition Height="0.2*" />
+                <RowDefinition Height="0.2*" />
+                <RowDefinition Height="0.25*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock
+                Name="PageText"
+                Grid.Column="1"
+                Text="Log in"
+                Style="{StaticResource TextBlockFontStyle}"
+                FontSize="48px"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Center"/>
+
+            <TextBox
+                Name="LoginTextBox"
+                Grid.Row="1"
+                Grid.Column="1"
+                Text="Login"
+                Style="{StaticResource RoundedTextBoxStyle}"
+                VerticalAlignment="Center"
+                Margin="100 20"
+                GotFocus="LoginTextBox_GotFocus"/>
+
+            <TextBox
+                Name="PasswordTextBox"
+                Grid.Row="2"
+                Grid.Column="1"
+                Text="Password"
+                Style="{StaticResource RoundedTextBoxStyle}"
+                VerticalAlignment="Center"
+                Margin="100 20"
+                GotFocus="PasswordTextBox_GotFocus"/>
+
+            <Button
+                Name="LoginButton"
+                Grid.Row="3"
+                Grid.Column="1"
+                Background="Black"
+                Content="LOG IN"
+                FontSize="36px"
+                Style="{StaticResource RoundedButtonStyle}"
+                Margin="150 15"
+                Click="LoginButton_Click"/>
+
+            <TextBlock
+                Name="ForgotPassword"
+                Grid.Row="4"
+                Grid.Column="1"
+                Text="Forgot password?"
+                Style="{StaticResource TextBlockFontStyle}"
+                FontSize="20px"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center"
+                MouseLeftButtonDown="ForgotPassword_Click"/>
+        </Grid>
+    </Grid>
+</Page>
