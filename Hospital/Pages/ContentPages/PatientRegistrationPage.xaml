@@ -58,8 +58,10 @@
                         <ColumnDefinition Width="0.5*"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    
-                    
+
+                    <Image
+                        Name="Photo"
+                        Grid.Column="1"/>
                 </Grid>
 
                 <Grid Name="MainInformationGrid" Grid.Column="1">

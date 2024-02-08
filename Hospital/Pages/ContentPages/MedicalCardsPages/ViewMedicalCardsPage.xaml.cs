@@ -1,4 +1,5 @@
-﻿using Hospital.Database;
+﻿using Hospital.Classes;
+using Hospital.Database;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -33,7 +34,36 @@ namespace Hospital.Pages.ContentPages.MedicalCardsPages
 
         private void OnRowDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            NavigationService.Navigate(new MedicalCardPage());
+            var selectedItem = MedicalCardsDataGrid.SelectedItem as Patient;
+
+            if (selectedItem != null)
+            {
+                var medicalCardViewModel = new MedicalCardViewModel();
+
+                medicalCardViewModel.FirstName = selectedItem.FirstName;
+                medicalCardViewModel.LastName = selectedItem.LastName;
+                medicalCardViewModel.Patronymic = selectedItem.Patronymic;
+                medicalCardViewModel.Photo = selectedItem.Photo;
+                medicalCardViewModel.Passport = selectedItem.Passport;
+                medicalCardViewModel.Birthdate = selectedItem.Birthdate;
+                medicalCardViewModel.Gender = selectedItem.Gender;
+                medicalCardViewModel.Country = selectedItem.Country;
+                medicalCardViewModel.City = selectedItem.City;
+                medicalCardViewModel.Street = selectedItem.Street;
+                medicalCardViewModel.House = (int)selectedItem.House;
+                medicalCardViewModel.Apartment = (int)selectedItem.Apartment;
+                medicalCardViewModel.PhoneNumber = selectedItem.PhoneNumber;
+                medicalCardViewModel.Email = selectedItem.Email;
+                medicalCardViewModel.MedicalCardNumber = selectedItem.MedicalCardNumber;
+                medicalCardViewModel.InsuranceNumber = selectedItem.InsuranceNumber;
+                medicalCardViewModel.LastAppointment = selectedItem.LastAppointment;
+                medicalCardViewModel.NextAppointment = selectedItem.NextAppointment;
+                medicalCardViewModel.Diagnosis = selectedItem.Diagnosis;
+                medicalCardViewModel.MedicalHistory = selectedItem.MedicalHistory;
+
+                var medicalCardPage = new MedicalCardPage { DataContext = medicalCardViewModel };
+                NavigationService.Navigate(medicalCardPage);
+            }
         }
     }
 }

@@ -222,6 +222,7 @@ namespace Hospital.Pages.ContentPages
             string enteredFirstName = FirstNameTextBox.Text;
             string enteredLastName = LastNameTextBox.Text;
             string enteredPatronymic = PatronymicTextBox.Text;
+            string enteredPhoto = Photo.Source.ToString();
             string enteredPassport = PassportTextBox.Text;
             string enteredBirthdate = BirthdateTextBox.Text;
             string enteredGender = GenderTextBox.Text;
@@ -259,6 +260,7 @@ namespace Hospital.Pages.ContentPages
                     FirstName = enteredFirstName,
                     LastName = enteredLastName,
                     Patronymic = enteredPatronymic,
+                    Photo = enteredPhoto,
                     Passport = enteredPassport,
                     Birthdate = enteredBirthdate,
                     Gender = enteredGender,
